@@ -1,6 +1,5 @@
 const socket = io();
-
-const nameOfUser = document.querySelector(".name-of-user")
+const nameOfUser =  document.querySelector(".name-of-user")
 const btnCommunity = document.getElementById("community")
 const btnHistory = document.getElementById("chat-history")
 const btnContact = document.getElementById("contact")
@@ -12,7 +11,7 @@ const buttonSend = document.getElementById("button-send")
          
         
 socket.on('connect', function() {
-    const username = prompt('Seu nome')
+    const username = document.getElementById("email-login").value
     user = {id: socket.id, name: username}
     socket.emit("NEW USER", user)
     users[socket.id] = user
