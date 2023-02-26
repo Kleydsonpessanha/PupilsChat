@@ -1,0 +1,72 @@
+:root {
+    --bg-login:#f5f5f5; 
+    --bg-container: #fff; 
+    --bg-button: #2196f3;
+    --font-family1: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: var(--bg-login);
+    font-family: var(--font-family1);
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--bg-container);
+    padding: 30px 24px;
+    border: 1px solid rgb(185,185,185);
+    border-radius: 12px;
+    max-width: 340px;
+    width: 80%;
+    
+}
+
+.paragraph-of-login {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+ }
+ 
+ .form-login {
+     display: flex;
+     flex-direction: column;
+     margin-top: 50px;
+ }
+
+ .title-login {
+    font-size: 40px;
+    text-align: center;
+ }
+ 
+ .inputs-login {
+     border: 1px solid rgb(220,220,220);
+     border-radius: 3rem;
+     padding: 13px;
+     margin-top: 1rem;
+     outline: 0;
+ }
+ 
+ .btn-of-login {
+     margin-top: 10px;
+     background-color: var(--bg-button);
+     border: none;
+     height: 38px;
+     border-radius: 16px;
+     color: #fff;
+     cursor: pointer;
+     font-size: 14px;
+     font-weight: 700;
+     font-size: 16px;
+     transition: .3s;
+ }
+
+ .footer {
+    padding-top: 2rem;
+    text-align: center;
+ }
+
+ .paragraph-register > a {
+    color: #2196f3;
+ }
