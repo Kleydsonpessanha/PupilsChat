@@ -6,6 +6,7 @@
 
 :root {
     --bg-home: #e5e5e5;
+    --bg-menu: #f0f4fa;
     --bg-login: #659642;
     --bg-container: #ffffff;
     --bg-btn-login: #2e612e; 
@@ -18,25 +19,42 @@ body {
   font-family: var(--font-family1);
 }
 
+#line {
+  width: 70%;
+    height: 0.1px;
+    background-color: rgb(180, 180, 180);
+}
+
 .container {
-  display: flex;
-  flex-wrap: wrap;
-
+     overflow: hidden;
+     display: flex;
+     height: 100vh;
 }
 
-.contact-and-menssage {
-   background-color: var(--bg-container);
-   width: 50%;
-   max-width: 400px;
-}
 
-.nav-bar-container {
-  padding: 0.5rem;
+
+.nav-bar {
+  transition: all ease .5s;
+  background-color: var(--bg-menu);
+  border-right: 1px solid rgb(211,211,211);
+  padding: 20px 5px;
   display: flex;
+  flex-direction: column;
+  max-width: 80px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
 }
 
+
+.nav-bar-top {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
 
 .image-profile {
   width: 50px;
@@ -59,23 +77,37 @@ body {
 }
 
 
-@media (max-width: 800px) {
-
-.container {
-  display: flex;
-  flex-direction: column;
-}
-
-  .contact-and-menssage {
-    width: 100%;
-  }
-}
-
-
-.form {
+.chat-global {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  bottom: 40px;
+    width: 100%;
+     position: relative;
+  }
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 1rem;
+    position: absolute;
+    bottom: 10px;
+}
+
+#input-send-message {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: 0;
+    background-color: #eaf2fe;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #4a4a4a;
+    padding-left: 15px;
+}
+
+.button-send {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
 }
