@@ -23,13 +23,13 @@
             <div class="nav-bar">
                <div class="nav-bar-top">
                 <figure><img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Photo of user" class="image-profile"></figure>
-                    <button class="button btn-nav-bar"><i class="ri-community-fill icons"></i></button>
-                    <button class="button btn-nav-bar"><i class="ri-chat-history-fill icons"></i></button>
-                    <button class="button btn-nav-bar"><i class="ri-message-2-fill icons"></i></button>
-                    <button class="button btn-nav-bar"><i class="ri-more-2-fill icons"></i></button>
+                    <button class="button btn-nav-bar" id="community"><i class="ri-community-line icons"></i></i></button>
+                    <button class="button btn-nav-bar" id="chat-history"><i class="ri-history-line icons"></i></i></button>
+                    <button class="button btn-nav-bar" id="contact"><i class="ri-contacts-book-2-line icons"></i></i></button>
+                    
                     <hr id="line">
 
-                    <button class="button btn-nav-bar"><i class="ri-login-box-line icons"></i></button>
+                    <button class="button btn-nav-bar" id="log-off"><i class="ri-login-box-line icons"></i></button>
                </div>
             </div>
             <div class="message-history">
@@ -38,13 +38,21 @@
            </section>
 
            <section class="chat-global">
-              
+               <ul class="message-history" id="messages">
+                 <p class="name-of-user"></p>
+               </ul>
+               
             <form action="" class="form" id="form">
                 <input type="text" name="" class="inputs" id="input-send-message" placeholder="Digite uma menssage">
-                <!-- <button class="button-send"><i class="ri-send-plane-2-fill"></i></button> -->
+                <button class="button-send" id="button-send" ><i class="ri-send-plane-2-fill"></i></button>
             </form>
            </section>
         </section>
       </main>
+      <script src="/socket.io/socket.io.js"></script>
+     <script src="../js/app.js"></script>
+      <script>
+      
+      </script>
 </body>
 </html>

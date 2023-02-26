@@ -23,7 +23,7 @@ function login() {
     const isPasswordInArray = passwords.filter(password => password === inputPassword)
       
     if(isEmailInArray.length > 0 && isPasswordInArray.length > 0) {
-       location.href = './app/app.html'
+       location.href = 'app.html'
     } else {
         alert("Invalid email or password")
     } 

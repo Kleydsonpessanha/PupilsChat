@@ -45,6 +45,7 @@ body {
   justify-content: space-between;
   height: 100vh;
   width: 100%;
+
 }
 
 
@@ -79,23 +80,45 @@ body {
 
 .chat-global {
   display: flex;
-  align-items: center;
-  justify-content: center;
-    width: 100%;
-     position: relative;
+  flex-direction: Column;
+  height: 100%;
+  flex: 1;
+  transition: all ease .5s;
+
   }
 
+  .message-history {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #f0f4fa;
+    padding: 20px 46px;
+  }
+
+
 .form {
-    display: flex;
+  height: 62px;
+  background-color: #f7f9fd;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  /* display: flex;
     align-items: center;
     justify-content: center; 
     gap: 1rem;
+    background-color: var(--bg-container);
     position: absolute;
-    bottom: 10px;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -50%);
+    width: 100%; 
+    margin: auto;
+    padding: 1rem; */
+    
 }
 
 #input-send-message {
-    width: 100%;
+    width: 90%;
+    max-width: 500px;
     height: 40px;
     border: none;
     outline: 0;
@@ -104,10 +127,13 @@ body {
     font-size: 15px;
     color: #4a4a4a;
     padding-left: 15px;
+    margin-left: 1rem;
+    
 }
 
 .button-send {
   border: none;
   background-color: transparent;
   font-size: 1rem;
+  margin-right: 1rem;
 }
