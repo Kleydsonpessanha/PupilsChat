@@ -8,7 +8,8 @@ app.use("/js", express.static("js", {}))
 app.use(express.static(__dirname + '/app'));
 
 
-
+let users = {}
+  
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/app/app.html');
@@ -17,17 +18,24 @@ app.get('/', (req, res) => {
 
 
 io.on('connection', (socket) => {
-  console.log('a user connected');
+  console.log(`[${socket.id}]: Entrou`);
 
-  socket.on('chat message', (msg) => {
-    console.log('message: ' + msg);
-    io.emit('chat message', msg);
+  socket.on('NEW USER', (user) => {
+      users[socket.id] = user;
+      io.emit('user joined', {users: users})
+  });
+
+  socket.on('chat message', (data) => {
+    io.emit('chat message', { message: data.message, user: data.user, users: users });
   });
 
   socket.on('disconnect', () => {
-    console.log('user disconnected');
+    delete users[socket.id]
+    io.emit('user left', {users: users})
+    console.log('user disconnected')
   });
 });
+
 
 http.listen(3000, () => {
   console.log('listening on *:3000');
