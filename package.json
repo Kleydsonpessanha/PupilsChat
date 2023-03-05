@@ -1,24 +1,18 @@
 {
+  "name": "PupilsChat",
+  "version": "1.0.0",
+  "main": "serve.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon"
+  },
   "dependencies": {
     "express": "^4.18.2",
     "socket.io": "^4.6.1"
   },
-  "scripts": {
-    "start": "node server.js"
-  },
-  "name": "pupilschat",
-  "version": "1.0.0",
-  "main": "server.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kleydsonpessanha/PupuilsChatt.git"
-  },
-  "author": "Kleydson Pessanha",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Kleydsonpessanha/PupuilsChatt/issues"
-  },
-  "homepage": "https://github.com/Kleydsonpessanha/PupuilsChatt#readme",
-  "description": ""
+  "devDependencies": {
+    "@vercel/node": "^2.6.2",
+    "nodemon": "^2.0.19"
+  }
 }
