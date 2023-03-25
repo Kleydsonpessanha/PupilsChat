@@ -79,7 +79,9 @@ gap: 2rem;
 .button {
 border: none;
 background-color: transparent;
-transition: all .1s;
+transition: all 1s;
+padding: 1rem;
+cursor: pointer;
 }
 
 .icons {
@@ -88,7 +90,6 @@ font-size: 1.3rem;
 
 .button:hover {
     background-color: #7289da;
-    width: 70%;
    
     color: #fff;
     border-radius: 20%;
