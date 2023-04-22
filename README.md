@@ -33,7 +33,7 @@ Então, se você quer se conectar com outras pessoas, ampliar sua rede de contat
 1. Clona o repositório
 2. Abre o vscode na pasta do projeto
 3. Abre um terminal integrado no vscode, clicando com o botão direito do mouse
-4. Roda o comando "node serve.js"
+4. Roda o comando "node server.js"
 
 
 
